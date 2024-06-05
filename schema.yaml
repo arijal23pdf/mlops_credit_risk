@@ -1,0 +1,13 @@
+COLUMNS:
+  customer_id: int64
+  credit_lines_outstanding: int64
+  loan_amt_outstanding: float64
+  total_debt_outstanding: float64
+  income: float64
+  years_employed: int64
+  fico_score: int64
+
+
+
+TARGET_COLUMNS:
+  default: int64
