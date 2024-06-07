@@ -24,4 +24,3 @@ class DataValidationConfig:
 class DataTransformationConfig:
     root_dir: Path
     data_path: Path
-    all_schema: dict
