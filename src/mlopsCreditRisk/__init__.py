@@ -1,6 +1,7 @@
 import os
 import sys
 import logging
+from dotenv import load_dotenv, find_dotenv
 
 # string for logging messages
 logging_str = "[%(asctime)s: %(levelname)s: %(module)s: %(message)s]"
@@ -22,3 +23,6 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger("mlopsCreditRiskLogger")
+
+# setup environment variables for, including for mlflow
+_ = load_dotenv(find_dotenv())
