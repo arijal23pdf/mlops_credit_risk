@@ -6,11 +6,12 @@ COLUMNS:
   income: float64
   years_employed: int64
   fico_score: int64
+  default: int64
 
 
 
 TARGET_COLUMNS:
-  default: int64
+  name: default
 
 
 NEW_FEATURES:
