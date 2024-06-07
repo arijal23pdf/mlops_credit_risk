@@ -19,8 +19,8 @@ except Exception as e:
 STAGE_NAME = "Data Validation stage"
 try:
    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<") 
-   data_ingestion = DataValidationTrainingPipeline()
-   data_ingestion.main()
+   data_validation = DataValidationTrainingPipeline()
+   data_validation.main()
    logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
 except Exception as e:
    logger.exception(e)
@@ -31,8 +31,8 @@ except Exception as e:
 STAGE_NAME = "Data Transformation stage"
 try:
    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<") 
-   data_ingestion = DataTransformationTrainingPipeline()
-   data_ingestion.main()
+   data_transformation = DataTransformationTrainingPipeline()
+   data_transformation.main()
    logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
 except Exception as e:
    logger.exception(e)
