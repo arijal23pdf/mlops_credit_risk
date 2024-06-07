@@ -1,6 +1,6 @@
 from mlopsCreditRisk.constants import *
 from mlopsCreditRisk.utils.common import read_yaml, create_directories
-from mlopsCreditRisk.entity.config_entity import DataIngestionConfig, DataValidationConfig
+from mlopsCreditRisk.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig
 
 
 
@@ -49,3 +49,25 @@ class ConfigurationManager:
         )
         
         return data_validation_config
+    
+    
+    def get_data_transformation_config(self) -> DataTransformationConfig:
+        config = self.config.data_transformation
+        #features_to_create = self.schema.NEW_FEATURES
+        #schema = self.schema.COLUMNS + self.schema.TARGET_COLUMNS
+        #target_from_data = self.schema.TARGET_COLUMNS
+        #drop_features = self.schema.DROP_FEATURES
+
+        create_directories([config.root_dir])
+
+        data_transformation_config = DataTransformationConfig(
+            root_dir=config.root_dir,
+            data_path=config.data_path,
+            #all_features_to_create=features_to_create,
+            #all_schema=schema,
+            #target_feature=target_from_data,
+            #all_drop_features=drop_features
+            
+        )
+
+        return data_transformation_config

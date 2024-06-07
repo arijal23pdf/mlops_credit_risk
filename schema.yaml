@@ -11,3 +11,15 @@ COLUMNS:
 
 TARGET_COLUMNS:
   default: int64
+
+
+NEW_FEATURES:
+  debt_to_income: [total_debt_outstanding, income] #total_debt_outstanding/income
+  payment_to_income: [loan_amt_outstanding, income] #loan_amt_outstanding/income
+
+
+DROP_FEATURES:
+  customer_id: int64
+  total_debt_outstanding: float64
+  loan_amt_outstanding: float64
+  income: float64
