@@ -24,6 +24,7 @@ class DataValidationConfig:
 class DataTransformationConfig:
     root_dir: Path
     data_path: Path
+    all_drop_features: str
 
 
 @dataclass(frozen=True)

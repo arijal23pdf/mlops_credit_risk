@@ -20,7 +20,7 @@ NEW_FEATURES:
 
 
 DROP_FEATURES:
-  customer_id: int64
-  total_debt_outstanding: float64
-  loan_amt_outstanding: float64
-  income: float64
+  customer_id: customer_id
+  total_debt_outstanding: customer_id
+  loan_amt_outstanding: customer_id
+  income: customer_id
