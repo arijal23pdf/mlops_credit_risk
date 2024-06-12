@@ -142,3 +142,7 @@ AWS_ECR_LOGIN_URI
 
 ECR_REPOSITORY_NAME
 ```
+
+# References:
+Project description: JPMorgan Chase and Co. (https://www.theforage.com/simulations/jpmorgan/quantitative-research-11oc)
+MLOps tutorial: https://www.youtube.com/watch?v=pxk1Fr33-L4&ab_channel=KrishNaik
