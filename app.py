@@ -30,10 +30,14 @@ def index():
             data = np.array([credit_lines_outstanding, loan_amt_outstanding, total_debt_outstanding, income, years_employed, fico_score])
 
             pred_obj = PredictionPipeline()
-            predict = pred_obj.predict(data.reshape(1, -1)) # scikit learn expects 2D array for prediction
+            predict, default_probability = pred_obj.predict(data.reshape(1, -1)) # scikit learn expects 2D array for prediction
+            
+            recovery_rate = 0.10
+            loss_given_default_rate = 1.0 - recovery_rate
+            expected_loss = loan_amt_outstanding * default_probability[0,1] * loss_given_default_rate
 
             if predict==1:
-                return render_template("results.html", prediction = str('Default'))
+                return render_template("results.html", prediction = str('Default. With expected loss = %s'%(expected_loss)))
             elif predict==0:
                 return render_template("results.html", prediction = str('No default'))
     
