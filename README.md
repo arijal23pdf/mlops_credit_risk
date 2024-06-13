@@ -144,5 +144,5 @@ ECR_REPOSITORY_NAME
 ```
 
 # References:
-Project description: JPMorgan Chase and Co. (https://www.theforage.com/simulations/jpmorgan/quantitative-research-11oc)
-MLOps tutorial: https://www.youtube.com/watch?v=pxk1Fr33-L4&ab_channel=KrishNaik
+1. Project description: JPMorgan Chase and Co. (https://www.theforage.com/simulations/jpmorgan/quantitative-research-11oc)
+2. MLOps tutorial: https://www.youtube.com/watch?v=pxk1Fr33-L4&ab_channel=KrishNaik
