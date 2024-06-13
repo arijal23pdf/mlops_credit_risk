@@ -12,6 +12,7 @@ class PredictionPipeline:
     
     def predict(self, data):
         prediction =  self.model.predict(data)
+        probability_of_default = self.model.predict_proba(data)
 
-        return prediction
+        return prediction, probability_of_default
 
